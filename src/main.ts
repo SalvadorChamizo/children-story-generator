@@ -1,16 +1,14 @@
 import { GoogleGenAI } from "@google/genai";
+import { generateStory } from "./api";
+import { validateTextUntilValid } from "../backend/src/utils/CheckStory"
 
 const ai = new GoogleGenAI({});
 
 async function main() {
-  const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
-    contents: "Explain how AI works in a few words",
-  });
-  console.log(response.text);
+    const story = document.getElementById("generated-story")!;
+    const text = await generateStory();
+    story.textContent = await validateTextUntilValid(text);
 }
 
 await main();
 
-window.addEventListener("hashchange", render);
-window.addEventListener("load", render);

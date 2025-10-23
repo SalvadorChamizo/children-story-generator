@@ -1,8 +1,28 @@
-const textarea = document.getElementById("textarea");
+import { GoogleGenAI } from "@google/genai";
 
-export async function generateStory {
-    const submitButton = document.getElementById("submit-button");
+const ai = new GoogleGenAI({ apiKey: "AIzaSyA-ygoW3e1wIULe90PtMJ3RVcClUAj-PBY" });
 
+const textarea = document.getElementById("textarea") as HTMLTextAreaElement | null;
 
+export async function generateStory(): Promise<string> {
+    const submitButton = document.getElementById("submit-button") as HTMLButtonElement | null;
 
+    if (submitButton) {
+        submitButton.addEventListener("click", async () => {
+            if (textarea && textarea.value) {
+                console.log("Textarea value:", textarea.value);
+
+                const response = await ai.models.generateContent({
+                    model: "gemini-2.5-flash",
+                    contents: `Generate a story for children with the following content: ${textarea.value}`,
+                        config: {
+                            systemInstruction: "You are a children' story writter. You will always assure your stories are valid for children between seven and twelve years old.",
+                        },
+                });
+                console.log(response.text);
+                return (response.text);
+            }
+        })
+    }
+    return "";
 }

@@ -1,4 +1,4 @@
-import { model } from "";
+import { model } from "gemini-2.5-flash";
 import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "fs";
 
 export async function validateTextUntilValid(input: string): Promise<string> {
