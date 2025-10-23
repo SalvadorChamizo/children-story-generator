@@ -13,3 +13,10 @@ Carlos García Martín
 Pablo González González
 Juan Antonio García Narváez
 Salvador Chamizo Viruelt
+
+Descargar
+
+CD children story generator
+
+Docker compose up
+
