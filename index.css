@@ -43,7 +43,7 @@ html {
 }
 
 
-#result {
+#story {
     background-color: #fff4d0;
     width: 89.6%;
     min-height: 3px;
@@ -68,7 +68,7 @@ html {
     border-bottom: solid;
 }
 
-#promp {
+#textarea {
     width: 90%;
     border-top-left-radius: 5px;
     border-bottom: 0;

@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">  
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">  
+    <title>StoryTeller</title>
 </head>
 <body>
-    <h1>Children' Story Generator</h1>
-    <textarea id="textarea" rows="10" cols="50" name="text"></textarea>
-    <button id="submit-button" class="submit-button">Generate</button>
+    <div id="header"><p class="title">STORYTELLER</p></div>
+    <div class="query">
+        <input id="textarea" name="text"></textarea>
+        <div id="submit-button" class="submit" onclick="generatestory()">></div>
+    </div>
     <div id="story"></div>
     <script type="module" src="/src/main.ts"></script>
 </body>

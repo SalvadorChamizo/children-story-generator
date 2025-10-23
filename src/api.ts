@@ -20,6 +20,7 @@ export async function generateStory(): Promise<string> {
                         },
                 });
                 console.log(response.text);
+                textarea.innerHTML += response;
                 return (response.text);
             }
         })
