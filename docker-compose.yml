@@ -1,0 +1,13 @@
+services:
+
+  server:
+    container-name: server
+    port:
+      - 5173:5173
+    network:
+      - backend
+
+networks:
+  backend:
+    name: backend
+    driver: bridge
