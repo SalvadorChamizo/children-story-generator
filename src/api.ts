@@ -23,7 +23,7 @@ export async function generateStory(): Promise<string> {
                 textarea.innerHTML += response;
                 const response2 = await ai.models.generateContent({
                     model: "gemini-2.5-flash",
-                    contents: `Berify that this story is kid frindly, if not, try to find a way to turn it into a childs story: ${response.text}`,
+                    contents: `Berify that this story is kid frindly, if not, try to find a way to turn it into a childs story if its kids friendly, just respond with  the sended story, else, send a kid friendly story: ${response.text}`,
                         config: {
                             systemInstruction: "You are a children' story writter. You will always assure your stories are valid for children between seven and twelve years old.",
                         },
