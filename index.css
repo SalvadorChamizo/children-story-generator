@@ -1,0 +1,56 @@
+html {
+    background-color: #ffb0ca;
+    padding-top: 12%;
+}
+
+::-webkit-scrollbar {
+    background: #FFC400;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF3F7F;
+    border-radius: 5px;
+}
+
+.title {
+    color: #FFC400;
+    font-size: 2.5vh;
+}
+
+.submit {
+    height: 3vh;
+    width: 3vw;
+    background-color: #FF3F7F;
+}
+
+#result {
+
+}
+
+.query {
+    display: flex;
+    width: 90%;
+    height: 10%;
+    padding-left: 5%;
+}
+
+#header {
+    width: 100%;
+    height: 8%;
+    overflow: auto;
+    position: fixed;
+    background-color: #450693;
+    top: 0px;
+    align-content: center;
+    text-align: center;
+    box-shadow: 5px 10px #8C00FF;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+body {
+    margin: 0;
+}
