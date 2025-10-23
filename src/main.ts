@@ -4,11 +4,11 @@ import { validateTextUntilValid } from "../backend/src/utils/CheckStory"
 
 async function main() {
     const story = document.getElementById("generated-story")!;
+    console.log("Entra");
     //const text = await generateStory();
     //story.textContent = await validateTextUntilValid(text);
-    if (story)
-        story.textContent = await generateStory();
+    story.textContent = await generateStory();
 }
 
 await main();
-
+window.addEventListener("load", main);

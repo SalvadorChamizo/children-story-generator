@@ -1,6 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyA-ygoW3e1wIULe90PtMJ3RVcClUAj-PBY" });
+const ai = new GoogleGenAI({ apiKey: "AIzaSyD3pWJp6GH0PbJwOjnDgbIFlRQ75_LcUpQ" });
 
 const textarea = document.getElementById("textarea") as HTMLTextAreaElement | null;
 
