@@ -1,0 +1,10 @@
+html {
+    background-color: #B4DEBD;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
