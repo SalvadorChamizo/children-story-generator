@@ -21,6 +21,14 @@ export async function generateStory(): Promise<string> {
                 });
                 console.log(response.text);
                 textarea.innerHTML += response;
+                const response2 = await ai.models.generateContent({
+                    model: "gemini-2.5-flash",
+                    contents: `Berify that this story is kid frindly, if not, try to find a way to turn it into a childs story: ${response.text}`,
+                        config: {
+                            systemInstruction: "You are a children' story writter. You will always assure your stories are valid for children between seven and twelve years old.",
+                        },
+                });
+                console.log(response2.text);
                 return (response.text);
             }
         })
